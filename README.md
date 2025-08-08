@@ -82,12 +82,6 @@ source("scripts/r/visualizations.R")
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**. See `LICENSE` for details.
-
----
-
 ## 👨‍💻 Authors
 
 - **Efe Gülalp** – Data collection pipeline, dataset annotation
