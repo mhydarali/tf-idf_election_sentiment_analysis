@@ -1,6 +1,6 @@
 # 📰 Trump Media Coverage Analysis
 
-&#x20; &#x20;
+&#x20;&#x20;
 
 **Analysis of 694 North American news articles on President Donald Trump, combining sentiment analysis, TF‑IDF term extraction, and data visualization.**
 
@@ -8,21 +8,22 @@
 
 ## 📄 Overview
 
-Media coverage strongly influences public perception of political figures. This project investigates:
+This project examines how North American media outlets cover President Donald Trump. Using **NewsAPI** for data collection, we:
 
-- **Dominant topics** in Trump-related news coverage
-- **Most distinctive keywords** within each topic (via TF‑IDF)
-- **Sentiment distribution** (Positive, Negative, Neutral) across topics
+- Categorized articles into six thematic topics via human annotation.
+- Performed **sentiment analysis** (Positive, Negative, Neutral).
+- Applied **TF‑IDF** to identify distinctive keywords per topic.
+- Created visualizations to illustrate trends.
 
-Data was collected over a 28‑day period using **NewsAPI**, drawing from a range of outlets to reduce ideological bias.
+The dataset spans a 28‑day period and includes coverage from across the political spectrum to minimize bias.
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Python** – Data cleaning, sentiment analysis, TF‑IDF keyword extraction
-- **R** – Data visualization (bar charts, heatmaps, pie charts)
-- **JSON** – Raw annotated dataset
+- **Python** – Data cleaning, sentiment analysis, TF‑IDF keyword extraction.
+- **R** – Data visualization (bar charts, heatmaps, pie charts).
+- **JSON** – Raw annotated dataset.
 
 ---
 
@@ -34,7 +35,6 @@ Data was collected over a 28‑day period using **NewsAPI**, drawing from a rang
 │   ├── python/           # Sentiment analysis & TF‑IDF processing
 │   └── r/                # R visualizations used in the report
 ├── report/               # Final PDF report & supplementary figures
-├── LICENSE               # MIT License
 └── README.md             # Project documentation
 ```
 
@@ -42,15 +42,19 @@ Data was collected over a 28‑day period using **NewsAPI**, drawing from a rang
 
 ## 📊 Key Findings
 
-- Most articles were **neutral**, challenging some expectations about media bias.
-- Six thematic categories were identified:
+- **Neutral tone dominance** – Most articles maintained a neutral tone, challenging common perceptions about consistent partisan bias.
+- **Sentiment by category** – Negative sentiment was concentrated in *Reaction and Public Sentiment* and *Legal Issues and Controversies*, while *Elections Results and Coverage* remained mostly neutral.
+- **Topic diversity** – Six mutually exclusive and collectively exhaustive thematic categories captured the full range of coverage:
   1. Policy Proposals & Political Positions
   2. Elections Results & Coverage
   3. Reaction & Public Sentiment
   4. Legal Issues & Controversies
   5. Foreign Affairs & Relations
   6. Electoral Campaign & Strategies
-- TF‑IDF analysis highlighted **topic‑specific keywords**, validating the human annotation framework.
+- **Distinctive vocabulary** – TF‑IDF revealed unique, topic-specific terms (e.g., “Iowa” for election coverage, “minister” for foreign affairs, “lawyers” for legal issues).
+- **Cross-category trends** – Certain geographic or campaign-related terms appeared in multiple categories, indicating overlap in media narratives.
+- **Public reaction highlights** – Cultural and social references (e.g., “UFC”, “Dogecoin”, “Nicky Jam”) showed how political events intersect with popular culture.
+- **Balanced methodology** – Articles were sourced from outlets across the political spectrum (Center, Center-Left, Center-Right) to ensure balanced representation.
 
 ---
 
@@ -74,7 +78,7 @@ python scripts/python/tfidf_analysis.py
 
 ### 3️⃣ Run R visualizations
 
-*(Requires **`ggplot2`**, **`tidytext`** — run from an R console or RStudio)*
+*(Requires **`ggplot2`**, **`tidytext`** — run from R console or RStudio)*
 
 ```r
 source("scripts/r/visualizations.R")
@@ -84,6 +88,6 @@ source("scripts/r/visualizations.R")
 
 ## 👨‍💻 Authors
 
-- **Efe Gülalp** – Data collection pipeline, dataset annotation
-- **Muhammad Hydarali** – Sentiment analysis, TF‑IDF, visualizations
-- **Eddy Hage‑Youssef** – Report writing, dataset annotation
+- **Efe Gülalp** – Data collection pipeline, dataset annotation.
+- **Muhammad Hydarali** – Sentiment analysis, TF‑IDF, visualizations.
+- **Eddy Hage‑Youssef** – Report writing, dataset annotation.
